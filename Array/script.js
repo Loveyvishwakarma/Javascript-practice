@@ -42,3 +42,14 @@ console.log("Result of flat(2) - flattened by two levels:", lovey.flat(2)); // T
 console.log("Result of reverse() - lovey in reverse order:", lovey.reverse()); // The reverse() method reverses the order of the elements in an array in place. In this case, it reverses the order of the elements in the array 'lovey', modifying the original array and returning a reference to the same array.
 
 console.log("Result of flat(Infinity) - completely flattened lovey:", lovey.flat(Infinity)); // The flat() method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth. In this case, it flattens the array 'lovey' completely, resulting in a single-level array containing all the elements, regardless of how deeply nested they are.
+
+
+let num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+[...spread] = [1, 2, 3, 4, 5, 6, 7, 8, 9]; // The spread operator (...) allows an iterable such as an array to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected. In this case, it creates a new array 'spread' that contains all the elements of the original array 'num'.
+
+console.log("\nOriginal array (num):", num);
+console.log("Result of spread operator - copied values:", spread);
+
+[x,y,...rest] = [1, 2, 3, 4, 5, 6, 7, 8, 9]; // The rest operator (...) allows us to collect the remaining elements of an array into a new array. In this case, it assigns the first two elements of the original array to variables 'x' and 'y', and collects the remaining elements into a new array 'rest'.
+
+console.log("Result of spread operator with rest - copied values starting from the fourth element:", rest);
